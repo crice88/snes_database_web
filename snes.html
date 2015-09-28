@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang ="en">
+	<head>
+		<title>SNES Database</title>
+		<style type="text/css" rel="stylesheet">
+			html, body {
+				text-align: center;
+				padding: 0;
+				margin: 0;
+			}
+			p {
+				font-size: 36pt;
+				text-align: center;
+			}
+			h1 {
+				text-align: center;
+				font-size: 22pt;
+			}
+		</style>
+	</head>
+	<body>
+		<form method="post" action="snes.php">
+			<div align="center">
+			<p><b><i>Add SNES Game to Database</i></b></p>
+			</div>
+			<label for="title"><b>Title of Game</b></label>
+			<input type="text" name="title" />
+			<br />
+			<br />
+			<label for="box"><b>Box (Yes or No?)</b></label>
+			<input type="text" name="box" />
+			<br />
+			<br />
+			<label for="instructions"><b>Instructions (Yes or No?)</b></label>
+			<input type="text" name="instructions" />
+			<br />
+			<br />
+			<label for="shape"><b>Shape</b></label>
+			<input type="text" name="shape" />
+			<br />
+			<br />
+			<label for="year"><b>Year</b></label>
+			<input type="number" name="year" />
+			<br />
+			<br />
+			<label for="num_copies"><b>Number of Copies</b></label>
+			<input type="number" name="num_copies" />
+			<br />
+			<br />
+			<input type="submit" value="Add to Database" />
+		</form> 	
+		<h1>
+			<a href="/test/show.html">What do I have??</a>
+		</h1>
+	</body>
+</html>

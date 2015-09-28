@@ -1,0 +1,22 @@
+html, body {
+	text-align: center;
+	padding: 0;
+	margin: 0;
+}
+.center {
+	width: 75%;
+	background-color: green;
+	margin-top: 200px;
+	text-align: center;
+}
+.center h1 {
+	font-size: 46pt;
+}
+p {
+	font-size: 36pt;
+	text-align: center;
+}
+h2 {
+	text-align: center, bottom;
+	font-size: 22pt;
+}

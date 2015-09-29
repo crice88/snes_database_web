@@ -2,7 +2,7 @@
 <html lang ="en">
 	<head>
 		<title>SNES Database</title>
-		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="snes.css">
 	</head>
 	<h1>
 		<?php

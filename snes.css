@@ -20,3 +20,10 @@ h2 {
 	text-align: center, bottom;
 	font-size: 22pt;
 }
+th, td {
+	border: 1px solid #CCC;
+}
+table {
+	border: 1px solid black;
+	text-align: center;
+}

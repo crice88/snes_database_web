@@ -31,6 +31,7 @@
 			else
 			{
 			}
+			$dbh = null;
 		?>
 		</h1>
 </html>

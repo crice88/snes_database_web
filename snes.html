@@ -6,39 +6,71 @@
 		<link rel="stylesheet" type="text/css" href="snes.css">
 	</head>
 	<body>
-		<p><img src="img/snes_logo.png" alt="Cool_logo"></p>
+		<div class="background">
+		<p><img src="img/snes_logo_trans.gif" alt="Cool_logo" border="0" /></p>
 		<form method="post" action="snes.php">
 			<div align="center">
-			<p><b><i>Add SNES Game to Database</i></b></p>
+			<h3>Add SNES Game to Database</h3>
 			</div>
 			<label for="title"><b>Title of Game</b></label>
 			<input type="text" name="title" />
 			<br />
 			<br />
 			<label for="box"><b>Box (Yes or No?)</b></label>
-			<input type="text" name="box" />
+			<input type="text" name="box" list="box_choice" />
 			<br />
 			<br />
 			<label for="instructions"><b>Instructions (Yes or No?)</b></label>
-			<input type="text" name="instructions" />
+			<input type="text" name="instructions" list="instructions_choice" />
 			<br />
 			<br />
 			<label for="shape"><b>Shape</b></label>
-			<input type="text" name="shape" />
+			<input type="text" name="shape" list="shape_choice"/>
 			<br />
 			<br />
 			<label for="year"><b>Year</b></label>
-			<input type="number" name="year" />
+			<input type="number" name="year" list="year_choice" />
 			<br />
 			<br />
 			<label for="num_copies"><b>Number of Copies</b></label>
-			<input type="number" name="num_copies" />
+			<input type="number" name="num_copies" list="copies_choice" />
 			<br />
 			<br />
 			<input type="submit" value="Add to Database" />
+			<input type="reset" value="Start Over" />
+			<datalist id="box_choice">
+				<option value="Yes">
+				<option value="No">
+			</datalist>
+			<datalist id="instructions_choice">
+				<option value="Yes">
+				<option value="No">
+			</datalist>
+			<datalist id="shape_choice">
+				<option value="Bad">
+				<option value="Good">
+				<option value="Great">
+				<option value="Mint">
+			</datalist>
+			<datalist id="year_choice">
+				<option value="1991">
+				<option value="1992">
+				<option value="1993">
+				<option value="1994">
+				<option value="1995">
+				<option value="1996">
+			</datalist>
+			<datalist id="year_choice">
+				<option value="1">
+				<option value="2">
+				<option value="3">
+				<option value="4">
+				<option value="5">
+			</datalist>
 		</form> 	
 		<h2>
-			<a href="/snes/show.html">What do I have??</a>
+			<a href="snes_retrieve.html">What do I have??</a>
 		</h2>
+		</div>
 	</body>
 </html>

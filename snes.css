@@ -3,22 +3,35 @@ html, body {
 	padding: 0;
 	margin: 0;
 }
+div.background {
+	background: rgba(227,227,227,1);
+	background: -moz-radial-gradient(center, ellipse cover, rgba(227,227,227,1) 0%, rgba(219,219,219,1) 31%, rgba(209,209,209,1) 58%, rgba(255,255,255,1) 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(227,227,227,1)), color-stop(31%, rgba(219,219,219,1)), color-stop(58%, rgba(209,209,209,1)), color-stop(100%, rgba(255,255,255,1)));
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(227,227,227,1) 0%, rgba(219,219,219,1) 31%, rgba(209,209,209,1) 58%, rgba(255,255,255,1) 100%);
+	background: -o-radial-gradient(center, ellipse cover, rgba(227,227,227,1) 0%, rgba(219,219,219,1) 31%, rgba(209,209,209,1) 58%, rgba(255,255,255,1) 100%);
+	background: -ms-radial-gradient(center, ellipse cover, rgba(227,227,227,1) 0%, rgba(219,219,219,1) 31%, rgba(209,209,209,1) 58%, rgba(255,255,255,1) 100%);
+	background: radial-gradient(ellipse at center, rgba(227,227,227,1) 0%, rgba(219,219,219,1) 31%, rgba(209,209,209,1) 58%, rgba(255,255,255,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e3e3e3', endColorstr='#ffffff', GradientType=1 );
+	padding: 0;
+	margin: 0;
+}
 .center {
 	width: 75%;
 	background-color: green;
-	margin-top: 200px;
+	margin-top: 150px;
 	text-align: center;
 }
 .center h1 {
 	font-size: 46pt;
 }
-p {
-	font-size: 36pt;
+h3 {
+	font-size: 24pt;
 	text-align: center;
+	color: purple;
 }
 h2 {
 	text-align: center, bottom;
-	font-size: 22pt;
+	font-size: 16pt;
 }
 th, td {
 	border: 1px solid #CCC;
@@ -26,4 +39,18 @@ th, td {
 table {
 	border: 1px solid black;
 	text-align: center;
+}
+input[type=submit] {
+	width: 5em;
+	font-size: 30pt;
+	font-weight: bolder;
+}
+input[type=reset] {
+	width: 5em;
+	font-size: 30pt;
+	font-weight: bolder; 
+}
+label {
+	//text-shadow: 2px 2px;
+	color: purple;
 }

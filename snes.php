@@ -9,8 +9,6 @@
 			$pass = 'rice1988';
 			$user = 'crice';
 			$dbh = new PDO('mysql:host=localhost;dbname=mysql', $user, $pass);
-			if ($dbh)
-				echo "Connected to Database!";
 			if(!empty($_POST['title']))
 			{
 				$title = $_POST['title'];
@@ -24,9 +22,17 @@
 				$values = "VALUES ('$title', '$box', '$instructions', '$shape', '$year', '$num_copies');";
 				
 				$dbq = $insert . $values;
-				$dbh->query($dbq);
+				try {
+					$dbh->query($dbq);
+				}
+				catch (Exception $e) {
+					echo "Worked!";
+					echo "Caught Exception: " , $e->getMessage() , "/n";
+					$dbh = null;
+				}
 				echo "<br /> Added values: $title, $box, $instructions, $shape, $year, $num_copies";
 				header('Location: ' . $_SERVER['HTTP_REFERER']);
+				sleep(2);
 			}
 			else
 			{

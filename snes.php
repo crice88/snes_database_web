@@ -1,43 +1,33 @@
+<?php
+	require('Snesdb.php');
+	$db = new Snesdb;
+?>
+
 <!DOCTYPE html>
 <html lang ="en">
 	<head>
 		<title>SNES Database</title>
 		<link rel="stylesheet" type="text/css" href="snes.css">
 	</head>
+	<body>
 	<h1>
-		<?php
-			$pass = 'rice1988';
-			$user = 'crice';
-			$dbh = new PDO('mysql:host=localhost;dbname=mysql', $user, $pass);
-			if(!empty($_POST['title']))
-			{
-				$title = $_POST['title'];
-				$box = $_POST['box'];
-				$instructions = $_POST['instructions'];
-				$shape = $_POST['shape'];
-				$year = $_POST['year'];
-				$num_copies = $_POST['num_copies'];
-				
-				$insert = "INSERT INTO snes_col_tbl ";
-				$values = "VALUES ('$title', '$box', '$instructions', '$shape', '$year', '$num_copies');";
-				
-				$dbq = $insert . $values;
-				try {
-					$dbh->query($dbq);
-				}
-				catch (Exception $e) {
-					echo "Worked!";
-					echo "Caught Exception: " , $e->getMessage() , "/n";
-					$dbh = null;
-				}
-				echo "<br /> Added values: $title, $box, $instructions, $shape, $year, $num_copies";
-				header('Location: ' . $_SERVER['HTTP_REFERER']);
-				sleep(2);
-			}
-			else
-			{
-			}
-			$dbh = null;
+		<?php 
+		if ($db->connected) {
+			echo "Connected to Database!!";
+		}
 		?>
-		</h1>
+	</h1>
+		<?php
+			if ($_POST > 0) 
+			{
+				if ($db->addDB($_POST) == true) {
+					echo "Successfully added to Database!!";
+				} else {
+					echo $db->getError();
+				}
+			} else {
+				echo file_get_contents('form.html');
+			}
+		?>
+	</body>
 </html>

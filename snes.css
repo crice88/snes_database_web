@@ -31,13 +31,23 @@ h3 {
 }
 h2 {
 	text-align: center, bottom;
-	font-size: 16pt;
+	font-size: 14pt;
 }
-th, td {
-	border: 1px solid #CCC;
+h4 {
+	text-align: center;
+	font-size: 40pt;
+}
+th {
+	font-size: 20pt;
+	border-bottom: 3px solid black;
+	font-style: italic;
+}
+td {
+	font-size: 16pt;
+	border: 1px solid black;
 }
 table {
-	border: 1px solid black;
+	border: 3px solid black;
 	text-align: center;
 }
 input[type=submit] {
@@ -51,6 +61,5 @@ input[type=reset] {
 	font-weight: bolder; 
 }
 label {
-	//text-shadow: 2px 2px;
 	color: purple;
 }

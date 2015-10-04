@@ -12,9 +12,9 @@ class SnesDB
 		try {
 			$this->dbh = new PDO('mysql:host=localhost;dbname=mysql', $this->user, $this->pass);
 			$this->connected = true;
-		}
-		catch (PDOException $e) {
+		} catch (PDOException $e) {
 			$this->error = $e->getMessage();
+			$this->dbh = null;
 			$this->connected = false;
 		}
 	}
@@ -31,16 +31,24 @@ class SnesDB
 			$insert = "INSERT INTO snes_col_tbl ";
 			$values = "VALUES ('$title', '$box', '$instructions', '$shape', '$year', '$num_copies');";
 			
-			$this->dbq = $insert . $values;
+			$dbq = $insert . $values;
 			$this->dbh->query($dbq);
 			$this->dbh = null;
 			return true;
-		}
-		catch (PDOException $e) {
+		} catch (PDOException $e) {
 			$this->error = $e->getMessage();
 			$this->dbh = null;
 			return false;
 		}
+	}
+	public function getDB()
+	{
+		$dbq = "Select * FROM snes_col_tbl;";
+		$dbarray = $this->dbh->prepare($dbq);
+		$dbarray->execute();
+		$result = $dbarray->fetchall();
+		$this->dbh = null;
+		return $result;
 	}
 	public function getError()
 	{

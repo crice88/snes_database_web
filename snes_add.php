@@ -1,27 +1,29 @@
-<?php
-	require('Snesdb.php');
-	$db = new Snesdb;
-?>
-
 <!DOCTYPE html>
 <html lang ="en">
 	<head>
 		<title>SNES Database</title>
 		<link rel="stylesheet" type="text/css" href="snes.css">
+		<meta charset="utf-8" http-equiv="refresh" content="3; url=snes_main.php" />
 	</head>
 	<body>
 	<h1>
 		<?php 
+		require('snes_class.php');
+		$db = new Snesdb;
 		if ($db->connected) {
 			echo "Connected to Database!!";
 		}
 		?>
 	</h1>
+	<h4>
 		<?php
-			if ($_POST > 0) 
+			if (count($_POST > 0)) 
 			{
 				if ($db->addDB($_POST) == true) {
 					echo "Successfully added to Database!!";
+					echo "\n";
+					echo "If page does not load <a href=\"javascript:history.go(-1)\">click here</a>";
+					$db = null;
 				} else {
 					echo $db->getError();
 				}
@@ -29,5 +31,6 @@
 				echo file_get_contents('form.html');
 			}
 		?>
+	</h4>
 	</body>
 </html>

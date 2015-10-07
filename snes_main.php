@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8"  />
 		<title>SNES Database</title>
-		<link rel="stylesheet" type="text/css" href="snes.css">
+		<link rel="stylesheet" type="text/css" href="snes.css" />
 	</head>
 	<body>
 		<div class="background">

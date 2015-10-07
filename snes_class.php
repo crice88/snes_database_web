@@ -43,12 +43,62 @@ class SnesDB
 	}
 	public function getDB()
 	{
-		$dbq = "Select * FROM snes_col_tbl;";
-		$dbarray = $this->dbh->prepare($dbq);
-		$dbarray->execute();
-		$result = $dbarray->fetchall();
-		$this->dbh = null;
-		return $result;
+		try {
+			$dbq = "Select * FROM snes_col_tbl;";
+			$dbarray = $this->dbh->prepare($dbq);
+			$dbarray->execute();
+			$result = $dbarray->fetchall();
+			$this->dbh = null;
+			return $result;
+		} catch (PDOException $e) {
+			$this->error = $e->getMessage();
+			$this->dbh = null;
+			return $this->error();
+		}
+	}
+	public function search($postArray)
+	{	
+		try {
+			$dbq = "SELECT ";
+			foreach ($postArray as $post)
+			{
+				switch ($post) {
+					case $post['title']:
+						echo "<th>" . "Title" . "</th>";
+						$dbq += "title, ";
+						break;
+					case $post['instructions']:
+						echo "<th>" . "Instructions" . "</th>";
+						$dbq += "instructions, ";
+						break;
+					case $post['box']:
+						echo "<th>" . "Box" . "</th>";
+						$dbq += "box, ";
+						break;
+					case $post ['shape']:
+						echo "<th>" . "Shape" . "</th>";
+						$dbq += "shape, ";
+						break;
+					case $post['num_copies']:
+						echo "<th>" . "Number of Copies" . "</th>";
+						$dbq += "num_copies, ";
+						break;
+					default:
+						echo "Error!!";
+						break;
+				}
+			}
+			$dbq = substr($dbq, 0, (strlen($dbq) - 2));
+			$dbq += " FROM snes_col_tbl;";
+			$dbarray = $this->dbh->prepare($dbq);
+			$dbarray->execute();
+			$result = $dbarray->fetchall();
+			$this->dbh = null;
+			return $result;
+		} catch (PDOException $e) {
+			$this->error = $e->getMessage();
+			return $this->error();
+		}
 	}
 	public function getError()
 	{

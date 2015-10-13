@@ -60,6 +60,7 @@ class SnesDB
 	{	
 		try {
 			$dbq = "SELECT ";
+			echo "<tr class=\"header\">";
 			foreach ($postArray as $post)
 			{
 				switch ($post) {
@@ -89,6 +90,7 @@ class SnesDB
 						break;
 				}
 			}
+			echo "</tr>";
 			$dbq = substr($dbq, 0, (strlen($dbq) - 2));
 			$dbq .= " FROM snes_col_tbl;";
 			$dbarray = $this->dbh->prepare($dbq);

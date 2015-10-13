@@ -3,32 +3,36 @@
 <legend>Add SNES Game to Database</legend>
 <br />
 <form method="post" action="snes_add.php">
-	<label for="title"><b>Title of Game</b></label>
-	<input type="text" name="title" />
-	<br />
-	<br />
-	<label for="box"><b>Box (Yes or No?)</b></label>
-	<input type="text" name="box" list="box_choice" />
-	<br />
-	<br />
-	<label for="instructions"><b>Instructions (Yes or No?)</b></label>
-	<input type="text" name="instructions" list="instructions_choice" />
-	<br />
-	<br />
-	<label for="shape"><b>Shape</b></label>
-	<input type="text" name="shape" list="shape_choice"/>
-	<br />
-	<br />
-	<label for="year"><b>Year</b></label>
-	<input type="number" name="year" list="year_choice" />
-	<br />
-	<br />
-	<label for="num_of_copies"><b>Number of Copies</b></label>
-	<input type="number" name="num_of_copies" list="copies_choice" />
-	<br />
-	<br />
-	<input type="submit" value="Add to Database" />
-	<input type="reset" value="Start Over" />
+	<table class="naked_table">
+		<tr>
+			<td><label for="title"><b>Title of Game</b></label></td>
+			<td><input type="text" name="title" /></td>
+		</tr>
+		<tr>
+			<td><label for="box"><b>Box (Yes or No?)</b></label></td>
+			<td><input type="text" name="box" list="box_choice" /></td>
+		</tr>
+		<tr>
+			<td><label for="instructions"><b>Instructions (Yes or No?)</b></label></td>
+			<td><input type="text" name="instructions" list="instructions_choice" /></td>
+		</tr>
+		<tr>
+			<td><label for="shape"><b>Shape</b></label></td>
+			<td><input type="text" name="shape" list="shape_choice"/></td>
+		</tr>
+		<tr>
+			<td><label for="year"><b>Year</b></label></td>
+			<td><input type="number" name="year" list="year_choice" /></td>
+		</tr>
+		<tr>
+			<td><label for="num_of_copies"><b>Number of Copies</b></label></td>
+			<td><input type="number" name="num_of_copies" list="copies_choice" /></td>
+		</tr>
+		<tr>
+			<td><input class="btn" type="submit" value="Add to Database" /></td>
+			<td><input class="btn" type="reset" value="Start Over" /></td>
+		</tr>
+	</table>
 	<datalist id="box_choice">
 		<option value="Yes">
 		<option value="No">

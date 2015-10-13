@@ -6,8 +6,8 @@
 	</head>
 	<body>
 		<p><img src="img/snes_logo_trans.gif" class="img_padding" alt="Cool_logo" /></p>
-		<table>
-			<tr>
+		<table class="display">
+			<tr class="header">
 				<th>Title</th>
 				<th>Box</th>
 				<th>Instructions</th>
@@ -25,7 +25,7 @@
 						{
 							foreach ($title as $row)
 							{
-								echo "<tr>";
+								echo "<tr class=\"data\">";
 								echo "<td><b>" . $row['title'] . "</b></td>";
 								echo "<td>" . $row['box'] . "</td>";
 								echo "<td>" . $row['instructions'] . "</td>";
@@ -44,8 +44,7 @@
 					{}
 				?>
 			</table>
-			<h2>
-				<a href="snes_search.php">Back to SNES Search</a>
-			</h2>
+			<br />
+			<a href="snes_search.php">Back to SNES Search</a>
 	</body>
 </html>

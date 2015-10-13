@@ -10,9 +10,9 @@
 		<link rel="stylesheet" type="text/css" href="snes.css">
 	</head>
 	<body>
-		<p><img src="img/snes_logo.png" alt="cool image"></p>
-		<table>
-			<tr>
+		<p><img src="img/snes_logo_trans.gif" alt="cool image"></p>
+		<table class="display">
+			<tr class="header">
 				<th>Title</th>
 				<th>Box</th>
 				<th>Instructions</th>
@@ -23,7 +23,7 @@
 			<?php
 				foreach($db->getDB() as $row)
 				{
-					echo "<tr>";
+					echo "<tr class=\"data\">";
 					echo "<td><b>" . $row['title'] . "</b></td>";
 					echo "<td>" . $row['box'] . "</td>";
 					echo "<td>" . $row['instructions'] . "</td>";
@@ -34,6 +34,7 @@
 				}
 			?>
 		</table>
-	<h2><a href="snes_main.php">Back to DB Entry</a></h2>
+	<br />
+	<a href="snes_main.php">Back to DB Entry</a>
 	</body>
 </html>

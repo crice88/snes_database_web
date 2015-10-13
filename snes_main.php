@@ -10,11 +10,10 @@
 		<?php 
 			echo file_get_contents('form.html');
 		?>
-		<h2>
-			<a href="snes_retrieve.php">What do I have??</a>
-			<br />
-			<br />
-			<a href="snes_search.php">Search</a>
-		</h2>
+		<br />
+		<a href="snes_retrieve.php">What do I have??</a>
+		&nbsp;
+		&nbsp;
+		<a href="snes_search.php">Search</a>
 	</body>
 </html>

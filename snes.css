@@ -1,7 +1,4 @@
-html {
-	text-align: center;
-}
-body {
+html, body {
 	background: #e2e2e2;
 	background: -moz-radial-gradient(center, ellipse cover, #e2e2e2 0%, #dbdbdb 50%, #d1d1d1 51%, #fefefe 100%);
 	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#e2e2e2), color-stop(50%,#dbdbdb), color-stop(51%,#d1d1d1), color-stop(100%,#fefefe));
@@ -10,12 +7,15 @@ body {
 	background: -ms-radial-gradient(center, ellipse cover, #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%);
 	background: radial-gradient(ellipse at center, #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe',GradientType=1 );
+	font-style: arial;
 	background-size: cover;                      
+	text-align: center;
 	padding: 0;
 	margin: 0;
 }
 h1 {
 	font-size: 46pt;
+	font-style: italic;
 	color: purple;
 }
 h2 {
@@ -31,14 +31,17 @@ th {
 	font-size: 20pt;
 	border-bottom: 3px solid black;
 	font-style: italic;
+	text-align: center;
 }
 td {
 	font-size: 16pt;
-	border: 1px solid black;
+	border: 3px solid black;
+	text-align: center;
 }
 table {
 	border: 3px solid black;
-	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
 }
 input[type=submit] {
 	width: 5em;
@@ -51,10 +54,25 @@ input[type=reset] {
 	font-weight: bolder; 
 }
 legend {
-	padding-left: 4px;
-	padding-right: 4px;
-	border:2pt black
+	border:2pt black;
+	font-size: 20pt;
+	font-weight: bold;	
 }
 fieldset {
+	margin-right: 30px;
+	margin-left: 30px;
 	padding-left: 10pt;
+}
+table.naked_table tr, td {
+	border-style: none;
+	font-size: 13pt;
+	text-align: left;
+}
+table.naked_table {
+	border-style: none;
+	font-size: 13pt;
+	text-align: left;
+}
+.img_padding {
+	padding: 0;
 }

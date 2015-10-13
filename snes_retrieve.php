@@ -10,9 +10,8 @@
 		<link rel="stylesheet" type="text/css" href="snes.css">
 	</head>
 	<body>
-		<div class="background">
 		<p><img src="img/snes_logo.png" alt="cool image"></p>
-		<table align="center">
+		<table>
 			<tr>
 				<th>Title</th>
 				<th>Box</th>
@@ -36,6 +35,5 @@
 			?>
 		</table>
 	<h2><a href="snes_main.php">Back to DB Entry</a></h2>
-	</div>
 	</body>
 </html>

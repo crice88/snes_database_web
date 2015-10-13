@@ -5,8 +5,8 @@
 		<link rel="stylesheet" type="text/css" href="snes.css" />
 	</head>
 	<body>
-		<div class="background">
-		<table align="center">
+		<p><img src="img/snes_logo_trans.gif" class="img_padding" alt="Cool_logo" /></p>
+		<table>
 			<tr>
 				<th>Title</th>
 				<th>Box</th>
@@ -47,6 +47,5 @@
 			<h2>
 				<a href="snes_search.php">Back to SNES Search</a>
 			</h2>
-		</div>
 	</body>
 </html>

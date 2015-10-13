@@ -11,19 +11,38 @@
 		<link rel="stylesheet" type="text/css" href="snes.css" />
 	</head>
 	<body>
-	<div class="background">
-		<h1>Search SNES DB</h1>
-		<div align="center">
+		<p><img src="img/snes_logo_trans.gif" alt="Cool_logo" /></p>
 		<br />
 		<fieldset>
 			<legend>Please select how you want your DB to be displayed</legend>
 			<form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-				<input type="checkbox" name="action[]" value="title" />Show Titles<br />
-				<input type="checkbox" name="action[]" value="instructions"/>Show if they have instructions<br />
-				<input type="checkbox" name="action[]" value="box" />Show if they have box<br />
-				<input type="checkbox" name="action[]" value="shape" />Show the games condition<br />
-				<input type="checkbox" name="action[]" value="num_of_copies" />Show number of copies owned<br />
-				<input type="checkbox" name="action[]" value="year" />Show the year of the game<br /><br />
+				<table class="naked_table">
+					<tr>
+						<td><input type="checkbox" name="action[]" value="title" /></td>
+						<td><label>Show Titles</label></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="action[]" value="instructions"/></td>
+						<td><label>Show if they have instructions</label></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="action[]" value="box" /></td>
+						<td><label>Show if they have box</label></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="action[]" value="shape" /></td>
+						<td><label>Show the games condition</label></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="action[]" value="num_of_copies" /></td>
+						<td><label>Show number of copies owned</label></td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" name="action[]" value="year" /></td>
+						<td><label>Show the year of the game</label></td>
+					</tr>
+				</table>
+				<br />
 				<input type="submit" value="Submit" />
 				<input type="reset" value="Reset values" />
 			</form>
@@ -67,8 +86,6 @@
 		</table>
 		<h2>
 			<a href="snes_main.php">Back to Database Entry</a>
-		</h2>
-		</div>		
-	</div>
+		</h2>	
 	</body>
 </html>

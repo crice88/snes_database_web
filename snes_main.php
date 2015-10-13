@@ -6,8 +6,7 @@
 		<link rel="stylesheet" type="text/css" href="snes.css" />
 	</head>
 	<body>
-		<div class="background">
-		<p><img src="img/snes_logo_trans.gif" alt="Cool_logo" /></p>
+		<p><img src="img/snes_logo_trans.gif" class="img_padding" alt="Cool_logo" /></p>
 		<?php 
 			echo file_get_contents('form.html');
 		?>
@@ -17,6 +16,5 @@
 			<br />
 			<a href="snes_search.php">Search</a>
 		</h2>
-	</div>
 	</body>
 </html>

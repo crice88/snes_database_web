@@ -26,10 +26,10 @@ class SnesDB
 			$instructions = $_POST['instructions'];
 			$shape = $_POST['shape'];
 			$year = $_POST['year'];
-			$num_copies = $_POST['num_copies'];
+			$num_of_copies = $_POST['num_of_copies'];
 			
 			$insert = "INSERT INTO snes_col_tbl ";
-			$values = "VALUES ('$title', '$box', '$instructions', '$shape', '$year', '$num_copies');";
+			$values = "VALUES ('$title', '$box', '$instructions', '$shape', '$year', '$num_of_copies');";
 			
 			$dbq = $insert . $values;
 			$this->dbh->query($dbq);
@@ -63,33 +63,34 @@ class SnesDB
 			foreach ($postArray as $post)
 			{
 				switch ($post) {
-					case $post['title']:
+					case 'title':
 						echo "<th>" . "Title" . "</th>";
-						$dbq += "title, ";
+						$dbq .= "title, ";
 						break;
-					case $post['instructions']:
+					case 'instructions':
 						echo "<th>" . "Instructions" . "</th>";
-						$dbq += "instructions, ";
+						$dbq .= "instructions, ";
 						break;
-					case $post['box']:
+					case 'box':
 						echo "<th>" . "Box" . "</th>";
-						$dbq += "box, ";
+						$dbq .= "box, ";
 						break;
-					case $post ['shape']:
+					case 'shape':
 						echo "<th>" . "Shape" . "</th>";
-						$dbq += "shape, ";
+						$dbq .= "shape, ";
 						break;
-					case $post['num_copies']:
+					case 'num_of_copies':
 						echo "<th>" . "Number of Copies" . "</th>";
-						$dbq += "num_copies, ";
+						$dbq .= "num_of_copies, ";
 						break;
-					default:
-						echo "Error!!";
+					case 'year':
+						echo "<th>" . "Year" . "</th>";
+						$dbq .= "year, ";
 						break;
 				}
 			}
 			$dbq = substr($dbq, 0, (strlen($dbq) - 2));
-			$dbq += " FROM snes_col_tbl;";
+			$dbq .= " FROM snes_col_tbl;";
 			$dbarray = $this->dbh->prepare($dbq);
 			$dbarray->execute();
 			$result = $dbarray->fetchall();
@@ -100,6 +101,27 @@ class SnesDB
 			return $this->error();
 		}
 	}
+
+	public function titleSearch($title)
+	{
+		$title = $_POST['title'];
+		$dbq = "SELECT title FROM snes_col_tbl WHERE title='$title';";
+		$dbarray = $this->dbh->prepare($dbq);
+		if ($dbarray)
+		{
+			$dbq = "SELECT * FROM snes_col_tbl WHERE title='$title';";
+			$dbarray = $this->dbh->prepare($dbq);
+			$dbarray->execute();
+			$result = $dbarray->fetchall();
+			$this->dbh = null;
+			return $result;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
 	public function getError()
 	{
 		return $this->error();

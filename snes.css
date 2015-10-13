@@ -21,8 +21,10 @@ div.background {
 	margin-top: 150px;
 	text-align: center;
 }
-.center h1 {
+h1 {
+	text-align: center;
 	font-size: 46pt;
+	color: purple;
 }
 h3 {
 	font-size: 24pt;
@@ -61,5 +63,13 @@ input[type=reset] {
 	font-weight: bolder; 
 }
 label {
-	color: purple;
+	
+}
+legend {
+	padding-left: 4px;
+	padding-right: 4px;
+	border:2pt black
+}
+fieldset {
+	padding-left: 10pt;
 }

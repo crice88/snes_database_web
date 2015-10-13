@@ -15,9 +15,9 @@
 		}
 		?>
 	</h1>
-	<h4>
+	<h2>
 		<?php
-			if (count($_POST > 0)) 
+			if (count($_POST) > 0) 
 			{
 				if ($db->addDB($_POST) == true) {
 					echo "Successfully added to Database!!";
@@ -31,6 +31,6 @@
 				echo file_get_contents('form.html');
 			}
 		?>
-	</h4>
+	</h2>
 	</body>
 </html>

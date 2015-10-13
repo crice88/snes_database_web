@@ -18,7 +18,7 @@
 				<?php
 					require('snes_class.php');
 					$db = new SnesDB;
-					if (count($_POST > 0))
+					if (count($_POST) > 0)
 					{
 						$title = $db->titleSearch($_POST);
 						if ($title == true)
@@ -44,6 +44,9 @@
 					{}
 				?>
 			</table>
+			<h2>
+				<a href="snes_search.php">Back to SNES Search</a>
+			</h2>
 		</div>
 	</body>
 </html>

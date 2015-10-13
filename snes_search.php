@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-	/*error_reporting(0);*/
+	error_reporting(0);
 	require('snes_class.php');
 	$db = new Snesdb;
 ?>
@@ -12,33 +12,37 @@
 	</head>
 	<body>
 	<div class="background">
+		<h1>Search SNES DB</h1>
 		<div align="center">
-		<h3>Search SNES DB</h3>
 		<br />
-		<form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-			<input type="checkbox" name="action[]" value="title" />Show Titles<br />
-			<input type="checkbox" name="action[]" value="instructions"/>Show if they have instructions<br />
-			<input type="checkbox" name="action[]" value="box" />Show if they have box<br />
-			<input type="checkbox" name="action[]" value="shape" />Show the games condition<br />
-			<input type="checkbox" name="action[]" value="num_of_copies" />Show number of copies owned<br />
-			<input type="checkbox" name="action[]" value="year" />Show the year of the game<br /><br />
-			<input type="submit" value="Submit" />
-			<input type="reset" value="Reset values" />
-		</form>
-		<h3> Or </h3>
-		<table>
-		<form method="post" action="snes_title_search.php">
-			<label for="title"><b>Search by Title</b></label>
-			<input type="text" name="title" />
-			<br />
-			<br />
-			<input type="submit" value="Submit" />
-			<input type="reset" value="Reset title" />
-		</form>
-		</table>
+		<fieldset>
+			<legend>Please select how you want your DB to be displayed</legend>
+			<form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+				<input type="checkbox" name="action[]" value="title" />Show Titles<br />
+				<input type="checkbox" name="action[]" value="instructions"/>Show if they have instructions<br />
+				<input type="checkbox" name="action[]" value="box" />Show if they have box<br />
+				<input type="checkbox" name="action[]" value="shape" />Show the games condition<br />
+				<input type="checkbox" name="action[]" value="num_of_copies" />Show number of copies owned<br />
+				<input type="checkbox" name="action[]" value="year" />Show the year of the game<br /><br />
+				<input type="submit" value="Submit" />
+				<input type="reset" value="Reset values" />
+			</form>
+		</fieldset>
+		<h1> Or </h1>
+		<fieldset>
+			<legend>Search by Title</legend>
+				<form method="post" action="snes_title_search.php">
+					<label for="title"><b>Search by Title</b></label>
+					<input type="text" name="title" />
+					<br />
+					<br />
+					<input type="submit" value="Submit" />
+					<input type="reset" value="Reset title" />
+				</form>
+		</fieldset>
 		<table>
 			<?php
-				if (count($_POST > 0))
+				if (count($_POST) > 0)
 				{
 					echo "<br />";
 					foreach ( $db->search($_POST['action']) as $post)
@@ -61,8 +65,10 @@
 				}
 			?>
 		</table>
-		</div>
-		
+		<h2>
+			<a href="snes_main.php">Back to Database Entry</a>
+		</h2>
+		</div>		
 	</div>
 	</body>
 </html>

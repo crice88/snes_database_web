@@ -13,6 +13,9 @@
 		?>
 		<h2>
 			<a href="snes_retrieve.php">What do I have??</a>
+			<br />
+			<br />
+			<a href="snes_search.php">Search</a>
 		</h2>
 	</div>
 	</body>

@@ -1,25 +1,18 @@
-html, body {
+html {
 	text-align: center;
+}
+body {
+	background: #e2e2e2;
+	background: -moz-radial-gradient(center, ellipse cover, #e2e2e2 0%, #dbdbdb 50%, #d1d1d1 51%, #fefefe 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#e2e2e2), color-stop(50%,#dbdbdb), color-stop(51%,#d1d1d1), color-stop(100%,#fefefe));
+	background: -webkit-radial-gradient(center, ellipse cover, #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%);
+	background: -o-radial-gradient(center, ellipse cover, #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%);
+	background: -ms-radial-gradient(center, ellipse cover, #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%);
+	background: radial-gradient(ellipse at center, #e2e2e2 0%,#dbdbdb 50%,#d1d1d1 51%,#fefefe 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe',GradientType=1 );
+	background-size: cover;                      
 	padding: 0;
 	margin: 0;
-}
-div.background {
-	background: rgba(227,227,227,1);
-	background: -moz-radial-gradient(center, ellipse cover, rgba(227,227,227,1) 0%, rgba(219,219,219,1) 31%, rgba(209,209,209,1) 58%, rgba(255,255,255,1) 100%);
-	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(227,227,227,1)), color-stop(31%, rgba(219,219,219,1)), color-stop(58%, rgba(209,209,209,1)), color-stop(100%, rgba(255,255,255,1)));
-	background: -webkit-radial-gradient(center, ellipse cover, rgba(227,227,227,1) 0%, rgba(219,219,219,1) 31%, rgba(209,209,209,1) 58%, rgba(255,255,255,1) 100%);
-	background: -o-radial-gradient(center, ellipse cover, rgba(227,227,227,1) 0%, rgba(219,219,219,1) 31%, rgba(209,209,209,1) 58%, rgba(255,255,255,1) 100%);
-	background: -ms-radial-gradient(center, ellipse cover, rgba(227,227,227,1) 0%, rgba(219,219,219,1) 31%, rgba(209,209,209,1) 58%, rgba(255,255,255,1) 100%);
-	background: radial-gradient(ellipse at center, rgba(227,227,227,1) 0%, rgba(219,219,219,1) 31%, rgba(209,209,209,1) 58%, rgba(255,255,255,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e3e3e3', endColorstr='#ffffff', GradientType=1 );
-	padding: 0;
-	margin: 0;
-}
-.center {
-	width: 75%;
-	background-color: green;
-	margin-top: 150px;
-	text-align: center;
 }
 h1 {
 	font-size: 46pt;
@@ -56,9 +49,6 @@ input[type=reset] {
 	width: 5em;
 	font-size: 30pt;
 	font-weight: bolder; 
-}
-label {
-	
 }
 legend {
 	padding-left: 4px;

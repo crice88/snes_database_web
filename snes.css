@@ -22,23 +22,18 @@ div.background {
 	text-align: center;
 }
 h1 {
-	text-align: center;
 	font-size: 46pt;
 	color: purple;
 }
-h3 {
-	font-size: 24pt;
-	text-align: center;
-	color: purple;
-}
 h2 {
-	text-align: center, bottom;
+	text-align: bottom;
 	font-size: 14pt;
 }
-h4 {
-	text-align: center;
-	font-size: 40pt;
+h3 {
+	font-size: 24pt;
+	color: purple;
 }
+
 th {
 	font-size: 20pt;
 	border-bottom: 3px solid black;

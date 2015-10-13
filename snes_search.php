@@ -28,11 +28,11 @@
 				<input type="reset" value="Reset values" />
 			</form>
 		</fieldset>
-		<h1> Or </h1>
+		<br />
+		<br />
 		<fieldset>
 			<legend>Search by Title</legend>
 				<form method="post" action="snes_title_search.php">
-					<label for="title"><b>Search by Title</b></label>
 					<input type="text" name="title" />
 					<br />
 					<br />

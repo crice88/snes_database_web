@@ -15,5 +15,8 @@
 		&nbsp;
 		&nbsp;
 		<a href="snes_search.php">Search</a>
+		&nbsp;
+		&nbsp;
+		<a href="snes_info.php">Info on Games I own</a>
 	</body>
 </html>

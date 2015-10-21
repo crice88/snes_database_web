@@ -124,6 +124,20 @@ class SnesDB
 		}
 	}
 
+	public function retrieveAllTitles()
+	{
+		$dbq = "SELECT title FROM snes_col_tbl;";
+		$dbarray = $this->dbh->prepare($dbq);
+		$dbarray->execute();
+		$result = $dbarray->fetchall();
+		$this->dbh = null;
+		foreach ($result as $title)
+		{
+			$titles = $title['title'];
+			echo "<option value=\"$titles\">";
+		}
+	}
+
 	public function getError()
 	{
 		return $this->error();

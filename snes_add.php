@@ -3,18 +3,13 @@
 	<head>
 		<title>SNES Database</title>
 		<link rel="stylesheet" type="text/css" href="snes.css">
-		<meta charset="utf-8" http-equiv="refresh" content="3; url=snes_main.php" />
+		<meta charset="utf-8" http-equiv="refresh" content="2; url=snes_main.php" />
 	</head>
 	<body>
-	<h1>
-		<?php 
+	<?php 
 		require('snes_class.php');
 		$db = new Snesdb;
-		if ($db->connected) {
-			echo "Connected to Database!!";
-		}
-		?>
-	</h1>
+	?>
 	<h2>
 		<?php
 			if (count($_POST) > 0) 
